@@ -1,0 +1,163 @@
+:root {
+  --green: #5dbe97;
+  --ink: #252525;
+  --muted: #626262;
+  --line: #b7c8e4;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 42px 58px;
+  color: var(--ink);
+  background: #dadbdd;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+body > * {
+  background: #faf9f9;
+}
+
+#header {
+  padding: 34px 40px 25px;
+  border-bottom: 1px solid var(--line);
+}
+
+#name {
+  display: inline-block;
+  margin: 0 24px 4px 0;
+  color: var(--blue);
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+#location {
+  display: inline-block;
+  margin: 0;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+
+#contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 17px;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 15px;
+  color: #1a4d8f;
+}
+
+section,
+#footer {
+  margin: 0;
+  padding: 20px 40px 0;
+}
+
+h2 {
+  margin: 0 0 11px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--blue);
+  color: var(--blue);
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+h3 {
+  margin: 13px 0 2px;
+  color: var(--blue);
+  font-size: 15px;
+}
+
+h4 {
+  margin: 10px 0 2px;
+  color: var(--ink);
+  font-size: 13px;
+}
+
+p {
+  margin: 4px 0 8px;
+}
+
+article {
+  break-inside: avoid;
+}
+
+ul {
+  margin: 5px 0 11px;
+  padding-left: 20px;
+}
+
+li {
+  margin: 2px 0;
+}
+
+strong {
+  color: #333;
+}
+
+#footer {
+  padding-bottom: 30px;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  body {
+    padding: 0;
+    background: #fff;
+    font-size: 13px;
+  }
+
+  #header,
+  section,
+  #footer {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  #name {
+    display: block;
+    font-size: 34px;
+  }
+
+  #location {
+    display: block;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+    padding: 0;
+    background: #fff;
+  }
+
+  a {
+    color: inherit;
+  }
+}
