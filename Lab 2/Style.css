@@ -1,0 +1,17 @@
+/* My own small CSS on top of Bootstrap */
+
+body {
+  background-color: #f5f5f5;
+}
+
+/* Cart link size in the navbar */
+.cart-icon {
+  font-size: 1.1rem;
+}
+
+/* Cards: rounded corners and a light shadow */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
