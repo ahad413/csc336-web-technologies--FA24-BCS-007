@@ -65,15 +65,102 @@
       />
 
       <section class="container my-4">
-        <h1 class="h3 mb-4">Our Products</h1>
+        <h1 class="h3 mb-3">Our Products</h1>
+
+        <!-- ===== TASK 1: CSS-only category filter =====
+           The radio buttons MUST come before the grid (same parent), because the CSS rule
+           uses the ~ selector to reach the cards that come after the checked radio button. -->
+        <input
+          type="radio"
+          class="btn-check"
+          name="category"
+          id="cat-all"
+          value="all"
+          checked
+        />
+        <label
+          class="btn btn-outline-secondary filter-label me-2 mb-3"
+          for="cat-all"
+          >All</label
+        >
+        <input
+          type="radio"
+          class="btn-check"
+          name="category"
+          id="cat-ac"
+          value="ac"
+        />
+        <label
+          class="btn btn-outline-secondary filter-label me-2 mb-3"
+          for="cat-ac"
+          >Air Conditioners</label
+        >
+        <input
+          type="radio"
+          class="btn-check"
+          name="category"
+          id="cat-fridge"
+          value="fridge"
+        />
+        <label
+          class="btn btn-outline-secondary filter-label me-2 mb-3"
+          for="cat-fridge"
+          >Refrigerators and Freezers</label
+        >
+        <input
+          type="radio"
+          class="btn-check"
+          name="category"
+          id="cat-washer"
+          value="washer"
+        />
+        <label
+          class="btn btn-outline-secondary filter-label me-2 mb-3"
+          for="cat-washer"
+          >Washing Machines</label
+        >
+        <input
+          type="radio"
+          class="btn-check"
+          name="category"
+          id="cat-other"
+          value="other"
+        />
+        <label
+          class="btn btn-outline-secondary filter-label me-2 mb-3"
+          for="cat-other"
+          >Other Appliances</label
+        >
+
+        <!-- ===== TASK 3: search box and sort button ===== -->
+        <div class="d-flex gap-2 mb-4">
+          <input
+            type="text"
+            id="search-box"
+            class="form-control"
+            placeholder="Search products by name"
+          />
+          <button
+            type="button"
+            id="sort-button"
+            class="btn btn-dark text-nowrap"
+          >
+            Sort by price
+          </button>
+        </div>
+
+        <!-- TASK 3: shown instead of the grid when no card matches -->
+        <p id="no-products" class="d-none fs-5">No products found</p>
 
         <!-- Bootstrap grid:
            row-cols-1  = 1 card per row on phones
            row-cols-md-2 = 2 cards per row from 768px (tablet)
            row-cols-lg-4 = 4 cards per row from 992px (desktop)
            g-4 = gap between cards -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-          <div class="col">
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 product-grid"
+        >
+          <div class="col" data-category="ac">
             <div class="card h-100">
               <a href="product.html"
                 ><img
@@ -83,14 +170,14 @@
               /></a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Mega T+ Inverter 10 CO</h5>
-                <p class="text-danger fw-bold">Rs 78,999</p>
+                <p class="price text-danger fw-bold">Rs 78,999</p>
                 <!-- mt-auto pushes the button to the bottom of the card -->
                 <button class="btn btn-danger mt-auto">Add to Cart</button>
               </div>
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" data-category="ac">
             <div class="card h-100">
               <a href="product.html"
                 ><img
@@ -100,14 +187,14 @@
               /></a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Chrome Inverter 20 (Copper Stamp)</h5>
-                <p class="text-danger fw-bold">Rs 114,200</p>
+                <p class="price text-danger fw-bold">Rs 114,200</p>
                 <!-- mt-auto pushes the button to the bottom of the card -->
                 <button class="btn btn-danger mt-auto">Add to Cart</button>
               </div>
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" data-category="fridge">
             <div class="card h-100">
               <a href="product.html"
                 ><img
@@ -117,14 +204,14 @@
               /></a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">SIGN NEW OUTLOOK CF-91998 Freezer</h5>
-                <p class="text-danger fw-bold">Rs 110,000</p>
+                <p class="price text-danger fw-bold">Rs 110,000</p>
                 <!-- mt-auto pushes the button to the bottom of the card -->
                 <button class="btn btn-danger mt-auto">Add to Cart</button>
               </div>
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" data-category="fridge">
             <div class="card h-100">
               <a href="product.html"
                 ><img
@@ -134,14 +221,14 @@
               /></a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">DSS-9055 INV INOX Refrigerator</h5>
-                <p class="text-danger fw-bold">Rs 245,924</p>
+                <p class="price text-danger fw-bold">Rs 245,924</p>
                 <!-- mt-auto pushes the button to the bottom of the card -->
                 <button class="btn btn-danger mt-auto">Add to Cart</button>
               </div>
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" data-category="washer">
             <div class="card h-100">
               <a href="product.html"
                 ><img
@@ -151,14 +238,14 @@
               /></a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">DWT 255 C Top Load Washing Machine</h5>
-                <p class="text-danger fw-bold">Rs 50,552</p>
+                <p class="price text-danger fw-bold">Rs 50,552</p>
                 <!-- mt-auto pushes the button to the bottom of the card -->
                 <button class="btn btn-danger mt-auto">Add to Cart</button>
               </div>
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" data-category="other">
             <div class="card h-100">
               <a href="product.html"
                 ><img
@@ -168,14 +255,14 @@
               /></a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">MWO DW-115-CHZP Microwave Oven</h5>
-                <p class="text-danger fw-bold">Rs 37,999</p>
+                <p class="price text-danger fw-bold">Rs 37,999</p>
                 <!-- mt-auto pushes the button to the bottom of the card -->
                 <button class="btn btn-danger mt-auto">Add to Cart</button>
               </div>
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" data-category="other">
             <div class="card h-100">
               <a href="product.html"
                 ><img
@@ -185,14 +272,14 @@
               /></a>
               <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Canvas Series Android TV 43 inch</h5>
-                <p class="text-danger fw-bold">Rs 88,500</p>
+                <p class="price text-danger fw-bold">Rs 88,500</p>
                 <!-- mt-auto pushes the button to the bottom of the card -->
                 <button class="btn btn-danger mt-auto">Add to Cart</button>
               </div>
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" data-category="washer">
             <div class="card h-100">
               <a href="product.html"
                 ><img
@@ -204,7 +291,7 @@
                 <h5 class="card-title">
                   DWF 7120 W INV Front Load Washing Machine
                 </h5>
-                <p class="text-danger fw-bold">Rs 130,423</p>
+                <p class="price text-danger fw-bold">Rs 130,423</p>
                 <!-- mt-auto pushes the button to the bottom of the card -->
                 <button class="btn btn-danger mt-auto">Add to Cart</button>
               </div>
@@ -252,5 +339,6 @@
 
     <!-- Bootstrap JS: only needed so the hamburger button opens the menu -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
