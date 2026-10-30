@@ -57,10 +57,10 @@
     </header>
 
     <main class="container my-4">
-      <!-- On phones the image and details stack; from 768px they sit side by side -->
-      <div class="row g-4">
-        <!-- Left: larger image -->
-        <div class="col-12 col-md-6">
+      <!-- TASK 2: CSS Grid with named areas (see .product-layout in Style.css) -->
+      <div class="product-layout">
+        <!-- Area "image": the larger product image -->
+        <div class="product-image">
           <img
             src="https://www.dawlance.com.pk/media/resize/F01000049100_MDM2_LOW_1.png/1000Wx1000H/image.webp"
             class="img-fluid"
@@ -68,15 +68,10 @@
           />
         </div>
 
-        <!-- Right: details -->
-        <div class="col-12 col-md-6">
+        <!-- Area "details": name, price, quantity and Add to Cart (this box is sticky) -->
+        <div class="product-details">
           <h1>Mega T+ Inverter 10 CO</h1>
           <p class="text-danger fw-bold fs-3">Rs 78,999</p>
-
-          <p>
-            An inverter split AC with 4D airflow, 6-in-1 health filters and a
-            self-cleaning feature. It cools fast and saves electricity.
-          </p>
 
           <!-- Quantity selector -->
           <label for="quantity" class="form-label">Quantity:</label>
@@ -92,6 +87,55 @@
           <!-- Add to Cart button (does not work yet) -->
           <button class="btn btn-danger btn-lg">Add to Cart</button>
         </div>
+
+        <!-- Area "description": long text, so the page scrolls and the sticky box can be seen working -->
+        <section class="product-description">
+          <h2 class="h4">Description</h2>
+          <p>
+            The Mega T+ Inverter 10 CO is an inverter split air conditioner made
+            for hot summers. Its inverter compressor changes speed instead of
+            switching on and off again and again, so the room stays at a steady
+            temperature and the electricity bill stays lower.
+          </p>
+          <p>
+            4D Airflow moves the air left and right and also up and down, so the
+            cool air reaches every corner of the room instead of one spot. This
+            is useful in larger bedrooms and lounges where one fixed direction
+            leaves some places warm.
+          </p>
+          <p>
+            The Memory Resumption feature remembers the last settings of the AC.
+            After a power cut, the AC starts again with the same mode and
+            temperature, so you do not have to set it again with the remote
+            every time the light comes back.
+          </p>
+          <p>
+            Gen Mode lets you choose the current level the AC is allowed to
+            draw. When you run the house on a generator or a small UPS, this
+            helps you control the power use so the AC does not overload it.
+          </p>
+          <p>
+            The 6-in-1 health filters help to keep the air in the room cleaner.
+            Dust and small particles are caught by the filters, which is good
+            for families with children or people who are sensitive to dust.
+          </p>
+          <p>
+            Zone Follow uses a sensor in the remote control. The AC then cools
+            by the real temperature around the person holding the remote and not
+            only by the temperature near the indoor unit.
+          </p>
+          <p>
+            Auto cleaning of the AC interior removes dust from the inside of the
+            indoor unit by itself. This keeps the cooling strong for longer and
+            reduces the number of times the unit needs to be cleaned by hand.
+          </p>
+          <p>
+            The AC comes with a 12 years compressor warranty, 6 years warranty
+            on functional parts and free installation. Installments are
+            available, and you can get an additional 2.5% off if you pay by
+            card.
+          </p>
+        </section>
       </div>
     </main>
 
