@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Makes the page fit the phone screen width (needed for responsiveness) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dawlance - Home</title>
+
+    <!-- Bootstrap CSS (framework) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- My own CSS -->
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <!-- ========== HEADER (same on both pages) ========== -->
+    <header>
+      <!-- Bootstrap navbar: full bar from 768px, hamburger menu below 768px -->
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+          <!-- Site name / logo on the left -->
+          <a class="navbar-brand fw-bold text-danger" href="index.html"
+            >Dawlance</a
+          >
+
+          <!-- Hamburger button (only shows on small screens) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- These links collapse into the hamburger menu on small screens -->
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Technologies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Mega Deals</a>
+              </li>
+            </ul>
+
+            <!-- Cart icon (does not work yet) -->
+            <a class="nav-link text-white" href="#">🛒 Cart</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Banner image under the header -->
+      <img
+        src="https://www.dawlance.com.pk/medias/Dawlance-Wedding-Vati-KV-final.jpg.webp?context=bWFzdGVyfGltYWdlc3wxMDg4NTg0fGltYWdlL3dlYnB8YUdVekwyZzBPUzh4TXpjeU1ETXlOemMwT1RZMk1pOUVZWGRzWVc1alpWOVhaV1JrYVc1bklGWmhkR2xmUzFaZlptbHVZV3d1YW5CbkxuZGxZbkF8ZjFiYTdhY2RkZWNiMGE3Y2I5ODFmOTE2ZTk0ZmFkMDQ0OTJlYTY0NTVlOTFhNDhhZGZiODU3YWY3YTcxZTE1OQ"
+        class="img-fluid w-100"
+        alt="Dawlance banner"
+      />
+
+      <section class="container my-4">
+        <h1 class="h3 mb-4">Our Products</h1>
+
+        <!-- Bootstrap grid:
+           row-cols-1  = 1 card per row on phones
+           row-cols-md-2 = 2 cards per row from 768px (tablet)
+           row-cols-lg-4 = 4 cards per row from 992px (desktop)
+           g-4 = gap between cards -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <a href="product.html"
+                ><img
+                  src="https://www.dawlance.com.pk/media/resize/F01000049100_MDM2_LOW_1.png/1000Wx1000H/image.webp"
+                  class="card-img-top"
+                  alt="Mega T+ Inverter 10 CO"
+              /></a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Mega T+ Inverter 10 CO</h5>
+                <p class="text-danger fw-bold">Rs 78,999</p>
+                <!-- mt-auto pushes the button to the bottom of the card -->
+                <button class="btn btn-danger mt-auto">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <a href="product.html"
+                ><img
+                  src="https://www.dawlance.com.pk/media/resize/F01000028200_MDM2_LOW_1.png/1000Wx1000H/image.webp"
+                  class="card-img-top"
+                  alt="Chrome Inverter 20 (Copper Stamp)"
+              /></a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Chrome Inverter 20 (Copper Stamp)</h5>
+                <p class="text-danger fw-bold">Rs 114,200</p>
+                <!-- mt-auto pushes the button to the bottom of the card -->
+                <button class="btn btn-danger mt-auto">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <a href="product.html"
+                ><img
+                  src="https://www.dawlance.com.pk/media/resize/F11021023430_MDM2_LOW_1.png/530Wx530H/image.webp"
+                  class="card-img-top"
+                  alt="SIGN NEW OUTLOOK CF-91998 Freezer"
+              /></a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">SIGN NEW OUTLOOK CF-91998 Freezer</h5>
+                <p class="text-danger fw-bold">Rs 110,000</p>
+                <!-- mt-auto pushes the button to the bottom of the card -->
+                <button class="btn btn-danger mt-auto">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <a href="product.html"
+                ><img
+                  src="https://www.dawlance.com.pk/media/resize/F01000000284_MDM2_LOW_1.png/2000Wx2000H/image.webp"
+                  class="card-img-top"
+                  alt="DSS-9055 INV INOX Refrigerator"
+              /></a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">DSS-9055 INV INOX Refrigerator</h5>
+                <p class="text-danger fw-bold">Rs 245,924</p>
+                <!-- mt-auto pushes the button to the bottom of the card -->
+                <button class="btn btn-danger mt-auto">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <a href="product.html"
+                ><img
+                  src="https://www.dawlance.com.pk/media/resize/F01000000149_MDM2_LOW_1.png/2000Wx2000H/image.webp"
+                  class="card-img-top"
+                  alt="DWT 255 C Top Load Washing Machine"
+              /></a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">DWT 255 C Top Load Washing Machine</h5>
+                <p class="text-danger fw-bold">Rs 50,552</p>
+                <!-- mt-auto pushes the button to the bottom of the card -->
+                <button class="btn btn-danger mt-auto">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <a href="product.html"
+                ><img
+                  src="https://www.dawlance.com.pk/media/resize/F11061012200_MDM2_LOW_1.png/2000Wx2000H/image.webp"
+                  class="card-img-top"
+                  alt="MWO DW-115-CHZP Microwave Oven"
+              /></a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">MWO DW-115-CHZP Microwave Oven</h5>
+                <p class="text-danger fw-bold">Rs 37,999</p>
+                <!-- mt-auto pushes the button to the bottom of the card -->
+                <button class="btn btn-danger mt-auto">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <a href="product.html"
+                ><img
+                  src="https://www.dawlance.com.pk/media/resize/F01000020300_LO1_20240415_143341.png/2000Wx2000H/image.webp"
+                  class="card-img-top"
+                  alt="Canvas Series Android TV 43 inch"
+              /></a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Canvas Series Android TV 43 inch</h5>
+                <p class="text-danger fw-bold">Rs 88,500</p>
+                <!-- mt-auto pushes the button to the bottom of the card -->
+                <button class="btn btn-danger mt-auto">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <a href="product.html"
+                ><img
+                  src="https://www.dawlance.com.pk/media/resize/F01000000222_7106191100_LO1_20190911_095452.png/2000Wx2000H/image.webp"
+                  class="card-img-top"
+                  alt="DWF 7120 W INV Front Load Washing Machine"
+              /></a>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">
+                  DWF 7120 W INV Front Load Washing Machine
+                </h5>
+                <p class="text-danger fw-bold">Rs 130,423</p>
+                <!-- mt-auto pushes the button to the bottom of the card -->
+                <button class="btn btn-danger mt-auto">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER (same on both pages) ========== -->
+    <footer class="site-footer">
+      <div class="container">
+        <!-- Footer columns (flexbox, see Style.css) -->
+        <div class="footer-columns">
+          <div>
+            <h5>Products</h5>
+            <ul>
+              <li><a href="#">Air Conditioners</a></li>
+              <li><a href="#">Refrigerators</a></li>
+              <li><a href="#">Washing Machines</a></li>
+              <li><a href="#">Microwave Ovens</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Corporate</h5>
+            <ul>
+              <li><a href="#">Life At Dawlance</a></li>
+              <li><a href="#">Policies</a></li>
+              <li><a href="#">News &amp; Events</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Customer Support</h5>
+            <ul>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Return And Refund Policy</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="copyright">&copy; 2026 dawlance.com.pk</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS: only needed so the hamburger button opens the menu -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
